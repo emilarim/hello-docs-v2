@@ -10,9 +10,17 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Hello Docs',
+  tagline: 'My first documentation site',
   favicon: 'img/favicon.ico',
+////////////////////////////////////////////new config
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
+  
+/////////////////////////////////////////////
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,16 +28,16 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://emilarim.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hello-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  organizationName: 'emilarim', // Usually your GitHub org/user name.
+  projectName: 'hello-docs', // Usually your repo name.
+  trailingSlash: true, // Consistency about broken links, and unexpected redirects.
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -46,29 +54,35 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', 
           sidebarPath: './sidebars.js',
+          //sidebarPath: require.resolve('./sidebars.js'),
+          //remarkPlugins: [require('remark-mermaid')],
+          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://emilarim.github.io/hello-docs/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
+        blog:false,
+        //blog: {
+          //showReadingTime: true,
+          //feedOptions: {
+            //type: ['rss', 'atom'],
+            //xslt: true,
+          //},
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl:
+           // 'https://emilarim.github.io/hello-docs/',
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+         // onInlineTags: 'warn',
+         // onInlineAuthors: 'warn',
+         // onUntruncatedBlogPosts: 'warn',
+       // },
         theme: {
-          customCss: './src/css/custom.css',
+          //customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -83,7 +97,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Docusaurus',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -93,11 +107,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/emilarim/hello-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -110,8 +124,9 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'UX Evaluation',
+                //to: '/docs/intro',
+                to: '/intro/',
               },
             ],
           },
@@ -132,21 +147,21 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+          //{
+            //title: 'More',
+            //items: [
+              //{
+                //label: 'Blog',
+                //to: '/blog',
+              //},
+              //{
+                //label: 'GitHub',
+                //href: 'https://github.com/facebook/docusaurus',
+              //},
+            //],
+          //},
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} emilarim project.`,
       },
       prism: {
         theme: prismThemes.github,
@@ -156,3 +171,8 @@ const config = {
 };
 
 export default config;
+
+//module.exports = config;
+
+
+

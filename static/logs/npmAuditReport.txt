@@ -1,0 +1,79 @@
+# npm audit report
+
+serialize-javascript  <=7.0.2
+Severity: high
+Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString() - https://github.com/advisories/GHSA-5c6j-r48x-rmvq
+fix available via `npm audit fix --force`
+Will install @docusaurus/core@3.5.2, which is a breaking change
+node_modules/serialize-javascript
+  copy-webpack-plugin  4.3.0 - 13.0.1
+  Depends on vulnerable versions of serialize-javascript
+  node_modules/copy-webpack-plugin
+    @docusaurus/bundler  *
+    Depends on vulnerable versions of copy-webpack-plugin
+    Depends on vulnerable versions of css-minimizer-webpack-plugin
+    node_modules/@docusaurus/bundler
+      @docusaurus/core  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+      Depends on vulnerable versions of @docusaurus/bundler
+      node_modules/@docusaurus/core
+        @docusaurus/plugin-content-blog  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-content-blog
+        @docusaurus/plugin-content-docs  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-content-docs
+        @docusaurus/plugin-content-pages  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-content-pages
+        @docusaurus/plugin-css-cascade-layers  *
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-css-cascade-layers
+          @docusaurus/preset-classic  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+          Depends on vulnerable versions of @docusaurus/core
+          Depends on vulnerable versions of @docusaurus/plugin-content-blog
+          Depends on vulnerable versions of @docusaurus/plugin-content-docs
+          Depends on vulnerable versions of @docusaurus/plugin-content-pages
+          Depends on vulnerable versions of @docusaurus/plugin-css-cascade-layers
+          Depends on vulnerable versions of @docusaurus/plugin-debug
+          Depends on vulnerable versions of @docusaurus/plugin-google-analytics
+          Depends on vulnerable versions of @docusaurus/plugin-google-gtag
+          Depends on vulnerable versions of @docusaurus/plugin-google-tag-manager
+          Depends on vulnerable versions of @docusaurus/plugin-sitemap
+          Depends on vulnerable versions of @docusaurus/plugin-svgr
+          Depends on vulnerable versions of @docusaurus/theme-classic
+          Depends on vulnerable versions of @docusaurus/theme-search-algolia
+          node_modules/@docusaurus/preset-classic
+        @docusaurus/plugin-debug  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-debug
+        @docusaurus/plugin-google-analytics  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-google-analytics
+        @docusaurus/plugin-google-gtag  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-google-gtag
+        @docusaurus/plugin-google-tag-manager  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-google-tag-manager
+        @docusaurus/plugin-sitemap  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-sitemap
+        @docusaurus/plugin-svgr  *
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/plugin-svgr
+        @docusaurus/theme-classic  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        Depends on vulnerable versions of @docusaurus/plugin-content-blog
+        Depends on vulnerable versions of @docusaurus/plugin-content-docs
+        Depends on vulnerable versions of @docusaurus/plugin-content-pages
+        node_modules/@docusaurus/theme-classic
+        @docusaurus/theme-mermaid  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        node_modules/@docusaurus/theme-mermaid
+        @docusaurus/theme-search-algolia  <=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132
+        Depends on vulnerable versions of @docusaurus/core
+        Depends on vulnerable versions of @docusaurus/plugin-content-docs
+        node_modules/@docusaurus/theme-search-algolia
+  css-minimizer-webpack-plugin  <=7.0.4
+  Depends on vulnerable versions of serialize-javascript
+  node_modules/css-minimizer-webpack-plugin
